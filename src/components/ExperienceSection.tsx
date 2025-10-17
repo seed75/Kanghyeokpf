@@ -10,6 +10,8 @@ type Exp = {
   badges?: string[];
 };
 
+const RESUME = `${import.meta.env.BASE_URL}resume_kang.pdf`;
+
 const EXPERIENCES: Exp[] = [
   {
     periodTop: "Dec 2023",
@@ -170,29 +172,30 @@ export default function ExperienceSection() {
         ))}
       </ul>
 
+      
       {/* CTA: View Full Résumé */}
-      <a
-        className="group mt-12 flex w-max items-center space-x-2"
-        aria-label="View Full Résumé"
-        href="/resume.pdf"
-        target="_blank"
-        rel="noreferrer"
-      >
-        <span className="font-semibold text-slate-800 decoration-blue-500 decoration-1 underline-offset-4 group-hover:underline dark:text-slate-500 dark:decoration-teal-500 lg:text-lg">
-          View Full Résumé
-        </span>
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          aria-hidden="true"
-          viewBox="0 0 24 24"
-          className="h-4 w-4 transition-transform group-hover:translate-x-2"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="1.5"
-        >
-          <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
-        </svg>
-      </a>
+<a
+  className="group mt-12 flex w-max items-center space-x-2"
+  aria-label="View Full Résumé"
+  href={`${import.meta.env.BASE_URL}resume_kang.pdf`}
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  <span className="font-semibold text-slate-800 decoration-blue-500 decoration-1 underline-offset-4 group-hover:underline dark:text-slate-500 dark:decoration-teal-500 lg:text-lg">
+    View Full Résumé
+  </span>
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    aria-hidden="true"
+    viewBox="0 0 24 24"
+    className="h-4 w-4 transition-transform group-hover:translate-x-2"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="1.5"
+  >
+    <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+  </svg>
+</a>
     </div>
   );
 }
