@@ -16,7 +16,10 @@ const applyTheme = (theme: Theme) => {
 };
 
 export const ThemeProvider: React.FC<{children: React.ReactNode}> = ({ children }) => {
-  const [theme, setTheme] = useState<Theme>(() => (localStorage.getItem('theme') as Theme) || 'dark');
+  const [theme, setTheme] = useState<Theme>(() => {
+  const saved = localStorage.getItem('theme') as Theme | null;
+  return saved ?? 'light';
+});
 
   // Apply on first paint to avoid flash
   useLayoutEffect(() => { applyTheme(theme); }, []); // first render
