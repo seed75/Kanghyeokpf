@@ -1,0 +1,81 @@
+@import "tailwindcss"; /* ✅ Tailwind v4 import */
+@import url("https://rsms.me/inter/inter.css");
+
+/* =========================
+   THEME TOKENS (정리본)
+   - ThemeProvider가 html에 'light' / 'dark' 또는 'dark cool' 클래스를 붙임
+   - 각 테마별 변수 여기서 한 번만 선언
+   ========================= */
+
+/* 기본값(안전망): 라이트 느낌을 디폴트로 — 클래스가 없을 때 사용됨 */
+:root {
+  --page-bg: #FFF8E7;  /* 크림화이트 */
+  --page-fg: #000000;  /* 블랙 텍스트 */
+  --card-bg: #FFFCF5;  /* 라이트 카드 */
+  --badge-bg: #E6E0D4; /* 라이트 배지 배경 */
+  --badge-fg: #3C3C3C; /* 라이트 배지 텍스트 */
+}
+
+/* 라이트 모드 */
+html.light {
+  --page-bg: #FFF8E7;
+  --page-fg: #000000;
+  --card-bg: #FFFCF5;
+
+  --badge-bg: #E6E0D4;
+  --badge-fg: #3C3C3C;
+}
+
+/* 다크 모드 (뉴트럴 다크) */
+html.dark {
+  --page-bg: #0E172A;  /* 딥 네이비/블랙 */
+  --page-fg: #E5E7EB;  /* 라이트 그레이 텍스트 */
+  --card-bg: #1E293B;  /* 다크 카드 톤 */
+
+  --badge-bg: rgba(45, 212, 191, .10); /* teal-500/10 */
+  --badge-fg: #5EEAD4;                 /* teal-300 */
+}
+
+/* 다크 쿨톤 (원하면 html에 'dark cool' 두 클래스 적용) */
+html.dark.cool {
+  --page-bg: #0F1623;  /* 더 차가운 딥 네이비 */
+  --page-fg: #E6EAF2;  /* 쿨톤 라이트 그레이 */
+  --card-bg: #121C2E;  /* 카드 살짝 밝게 */
+  /* 보조 텍스트까지 쓰고 싶으면: --muted-fg: #A9B4C7; */
+
+  --badge-bg: #223049; /* 네이비+그레이 배지 배경 */
+  --badge-fg: #D7E3FF; /* 아이스 블루 텍스트 */
+}
+
+/* 전역 적용(안전망): 변수 못 읽을 때 대비 */
+body {
+  background: var(--page-bg, #FFF8E7);
+  color: var(--page-fg, #000);
+}
+
+/* =========================
+   ETC: 커스텀 컴포넌트/유틸
+   ========================= */
+
+#nprogress { pointer-events: none; }
+#nprogress .bar {
+  background: #2dd4bf;
+  position: fixed; z-index: 9999;
+  top: 0; left: 0; width: 100%; height: 2px;
+}
+#nprogress .peg {
+  display: block; position: absolute; right: 0;
+  width: 100px; height: 100%;
+  box-shadow: 0 0 10px #2dd4bf, 0 0 5px #2dd4bf;
+  opacity: 1; transform: rotate(3deg) translate(0, -4px);
+}
+#nprogress .spinner { display: block; position: fixed; z-index: 1031; top: 15px; right: 15px; }
+#nprogress .spinner-icon {
+  width: 18px; height: 18px; box-sizing: border-box;
+  border: solid 2px transparent;
+  border-top-color: #2dd4bf; border-left-color: #2dd4bf;
+  border-radius: 50%; animation: nprogress-spinner 400ms linear infinite;
+}
+@keyframes nprogress-spinner {
+  0% { transform: rotate(0) } 100% { transform: rotate(360deg) }
+}
