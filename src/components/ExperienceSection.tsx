@@ -177,7 +177,7 @@ export default function ExperienceSection() {
 <a
   className="group mt-12 flex w-max items-center space-x-2"
   aria-label="View Full Résumé"
-  href={`${import.meta.env.BASE_URL}resume_kang.pdf`}
+  href={RESUME}
   target="_blank"
   rel="noopener noreferrer"
 >
