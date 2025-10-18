@@ -7,6 +7,8 @@ import ProjectsSection from "./components/ProjectsSection";
 import { useActiveSection } from "./hooks/useActiveSection";
 import { useEffect } from "react";
 
+import MobileDockNav from "./components/MobileDockNav";
+
 export default function App() {
   const sectionIds = ["about", "experience", "projects"/*나중에 "testimonials" 추가*/];
   const activeId = useActiveSection(sectionIds);
@@ -18,36 +20,43 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-[var(--page-bg)] text-[var(--page-fg)]">
-      <Layout>
-        <Header activeId={activeId} />
+      {/* 모바일에서만 하단 도크 높이만큼 여유(padding-bottom) 확보 */}
+      <div className="mx-auto w-full max-w-screen-xl px-6 pb-24 pt-12 md:px-12 lg:pb-0 lg:pt-0">
+        <Layout>
+          <Header activeId={activeId} />
 
-        <main className="relative z-10 lg:w-1/2 lg:py-24">
-          {/* ABOUT */}
-          <section id="about" className="relative space-y-6 pb-14 last:pb-0 lg:space-y-0 lg:pb-32">
-            <div className="sticky top-4 z-30">
-              <h2 className="py-2 text-sm font-medium uppercase tracking-widest lg:sr-only">about</h2>
-            </div>
-            <AboutSection />
-          </section>
+          <main className="relative z-10 lg:w-1/2 lg:py-24">
+            {/* ABOUT */}
+            <section id="about" className="relative space-y-6 pb-14 last:pb-0 lg:space-y-0 lg:pb-32">
+              <div className="sticky top-4 z-30">
+                <h2 className="py-2 text-sm font-medium uppercase tracking-widest lg:sr-only">about</h2>
+              </div>
+              <AboutSection />
+            </section>
 
-          {/* EXPERIENCE */}
-          <section id="experience" className="relative space-y-6 pb-14 last:pb-0 lg:space-y-0 lg:pb-32">
-            <div className="sticky top-4 z-30">
-              <h2 className="py-2 text-sm font-medium uppercase tracking-widest lg:sr-only">experience</h2>
-            </div>
-            <ExperienceSection />
-          </section>
+            {/* EXPERIENCE */}
+            <section id="experience" className="relative space-y-6 pb-14 last:pb-0 lg:space-y-0 lg:pb-32">
+              <div className="sticky top-4 z-30">
+                <h2 className="py-2 text-sm font-medium uppercase tracking-widest lg:sr-only">experience</h2>
+              </div>
+              <ExperienceSection />
+            </section>
 
-          {/* PROJECTS */}
-          <section id="projects" className="relative space-y-6 pb-14 last:pb-0 lg:space-y-0 lg:pb-32">
-            <div className="sticky top-4 z-30">
-              <h2 className="py-2 text-sm font-medium uppercase tracking-widest lg:sr-only">projects</h2>
-            </div>
-            <ProjectsSection />
-          </section>
-          {/* TESTIMONIALS */}
-        </main>
-      </Layout>
+            {/* PROJECTS */}
+            <section id="projects" className="relative space-y-6 pb-14 last:pb-0 lg:space-y-0 lg:pb-32">
+              <div className="sticky top-4 z-30">
+                <h2 className="py-2 text-sm font-medium uppercase tracking-widest lg:sr-only">projects</h2>
+              </div>
+              <ProjectsSection />
+            </section>
+
+            {/* TESTIMONIALS (나중에 추가) */}
+          </main>
+        </Layout>
+      </div>
+
+      {/* 모바일 하단 도크 네비(데스크톱에는 숨김) */}
+      <MobileDockNav />
     </div>
   );
 }

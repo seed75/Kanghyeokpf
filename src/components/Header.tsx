@@ -19,7 +19,7 @@ export default function Header({ activeId }: HeaderProps) {
             <div className="block lg:hidden"><ThemeToggle /></div>
           </div>
           <div className="flex items-center space-x-1">
-            <h2 className="text-lg sm:text-xl">Junior Software Developer</h2>
+            <h2 className="text-lg sm:text-xl">Front-End Developer</h2>
             <div className="relative">
               <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 stroke-yellow-500 stroke-2 lg:animate-flicker" fill="none" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z"/>
