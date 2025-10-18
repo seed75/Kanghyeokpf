@@ -24,6 +24,8 @@ html.light {
 
   --badge-bg: #E6E0D4;
   --badge-fg: #3C3C3C;
+
+   --nav-line: #000;
 }
 
 /* 다크 모드 (뉴트럴 다크) */
@@ -34,6 +36,8 @@ html.dark {
 
   --badge-bg: rgba(45, 212, 191, .10); /* teal-500/10 */
   --badge-fg: #5EEAD4;                 /* teal-300 */
+
+  --nav-line: #fff;
 }
 
 /* 다크 쿨톤 (원하면 html에 'dark cool' 두 클래스 적용) */

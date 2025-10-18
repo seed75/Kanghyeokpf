@@ -21,31 +21,31 @@ export default function App() {
   return (
     <div className="min-h-screen bg-[var(--page-bg)] text-[var(--page-fg)]">
       {/* 모바일에서만 하단 도크 높이만큼 여유(padding-bottom) 확보 */}
-      <div className="mx-auto w-full max-w-screen-xl px-6 pb-24 pt-12 md:px-12 lg:pb-0 lg:pt-0">
+      <div className="mx-auto w-full max-w-screen-xl px-6 pb-[max(6rem,calc(4.5rem+env(safe-area-inset-bottom)))] pt-12 md:px-12 lg:pb-0 lg:pt-0">
         <Layout>
           <Header activeId={activeId} />
 
           <main className="relative z-10 lg:w-1/2 lg:py-24">
             {/* ABOUT */}
             <section id="about" className="relative space-y-6 pb-14 last:pb-0 lg:space-y-0 lg:pb-32">
-              <div className="sticky top-4 z-30">
-                <h2 className="py-2 text-sm font-medium uppercase tracking-widest lg:sr-only">about</h2>
+              <div className="hidden lg:sticky lg:top-4 lg:z-30 lg:block">
+                <h2 className="py-2 text-xs font-medium uppercase tracking-widest">about</h2>
               </div>
               <AboutSection />
             </section>
 
             {/* EXPERIENCE */}
             <section id="experience" className="relative space-y-6 pb-14 last:pb-0 lg:space-y-0 lg:pb-32">
-              <div className="sticky top-4 z-30">
-                <h2 className="py-2 text-sm font-medium uppercase tracking-widest lg:sr-only">experience</h2>
+              <div className="hidden lg:sticky lg:top-4 lg:z-30 lg:block">
+                <h2 className="py-2 text-xs font-medium uppercase tracking-widest">experience</h2>
               </div>
               <ExperienceSection />
             </section>
 
             {/* PROJECTS */}
             <section id="projects" className="relative space-y-6 pb-14 last:pb-0 lg:space-y-0 lg:pb-32">
-              <div className="sticky top-4 z-30">
-                <h2 className="py-2 text-sm font-medium uppercase tracking-widest lg:sr-only">projects</h2>
+              <div className="hidden lg:sticky lg:top-4 lg:z-30 lg:block">
+                <h2 className="py-2 text-xs font-medium uppercase tracking-widest">projects</h2>
               </div>
               <ProjectsSection />
             </section>

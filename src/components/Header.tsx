@@ -6,9 +6,9 @@ type HeaderProps = { activeId?: string };
 export default function Header({ activeId }: HeaderProps) {
   return (
     // ① 모바일에서 넘침 차단
-    <header className="relative overflow-hidden shrink-0 pb-20 lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-1/2 lg:flex-col lg:justify-between lg:py-24">
+    <header className="relative overflow-hidden lg:overflow-visible shrink-0 pb-20 lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-1/2 lg:flex-col lg:justify-between lg:py-24">
       {/* ② 블롭: 모바일(hidden) / md 이상(block) */}
-      <div className="pointer-events-none absolute inset-0 -z-10 hidden md:block">
+      <div className="pointer-events-none absolute inset-y-0 left-[-8rem] right-[-8rem] -z-10 hidden md:block">
         <BlobBackground />
       </div>
 
@@ -34,30 +34,47 @@ export default function Header({ activeId }: HeaderProps) {
         </div>
 
         {/* Left rail */}
-        <nav className="mt-24 hidden lg:block">
-          <ul className="space-y-6">
-            {["about", "experience", "projects"].map((id) => {
-              const isActive = activeId === id;
-              return (
-                <li key={id}>
-                  <a
-                    href={`#${id}`}
-                    onClick={(e) => {
-                      e.preventDefault();
-                      document.getElementById(id)?.scrollIntoView({ behavior: "smooth", block: "start" });
-                      history.replaceState(null, "", `#${id}`);
-                    }}
-                    aria-current={isActive ? "true" : undefined}
-                    className={`group flex items-center space-x-6 transition-opacity ${isActive ? "opacity-100" : "opacity-40 hover:opacity-100"}`}
-                  >
-                    <div className={`h-px bg-slate-800 dark:bg-slate-100 transition-all ${isActive ? "w-16" : "w-8 group-hover:w-16"}`} />
-                    <span className="text-xs font-medium uppercase tracking-widest">{id}</span>
-                  </a>
-                </li>
-              );
-            })}
-          </ul>
-        </nav>
+       <nav className="mt-24 hidden lg:block">
+  <ul className="space-y-6">
+    {["about", "experience", "projects"].map((id) => {
+      const isActive = activeId === id;
+      return (
+        <li key={id}>
+          <a
+            href={`#${id}`}
+            className="group flex items-center space-x-6"
+            aria-label={`View ${id} section`}
+            onClick={(e) => {
+              e.preventDefault();
+              document.getElementById(id)?.scrollIntoView({ behavior: "smooth", block: "start" });
+              history.replaceState(null, "", `#${id}`);
+            }}
+          >
+            {/* 라이트=검정, 다크=흰색. 부모 opacity 영향 X */}
+            <div
+              className={`h-px bg-black dark:bg-white transition-all ${
+                isActive ? "w-16" : "w-8 group-hover:w-16"
+                }`}
+              style={{
+    backgroundColor: "var(--nav-line)",
+    opacity: 1,                 // 부모 opacity 영향 최소화
+    mixBlendMode: "normal"      // 블렌드로 색이 씻기는 상황 방지
+  }}
+            />
+            {/* 텍스트만 흐림/호버 처리 */}
+            <span
+              className={`text-xs font-medium uppercase tracking-widest ${
+                isActive ? "opacity-100" : "opacity-40 group-hover:opacity-100"
+              }`}
+            >
+              {id}
+            </span>
+          </a>
+        </li>
+      );
+    })}
+  </ul>
+</nav>
       </div>
 
       {/* Left section footer */}
