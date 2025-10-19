@@ -30,7 +30,7 @@ export default function Header({ activeId }: HeaderProps) {
               />
             </div>
           </div>
-          <p className="max-w-xs">I don’t just code websites — I bring them to life (trying).</p>
+          <p className="max-w-xs">I don’t just code websites — I learn, grow, and bring ideas to life.</p>
         </div>
 
         {/* Left rail */}

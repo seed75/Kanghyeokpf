@@ -1,7 +1,7 @@
 export default function SocialLinks() {
   const GITHUB  = "https://github.com/seed75";
   const LINKEDIN = "https://www.linkedin.com/in/kanghyeok-lee/";
-  const RESUME   = "/resume_kang.pdf";
+  const RESUME   = "/Kanghyeok LEE_CV.pdf";
 
   // Stronger in light mode, same vibe in dark mode
   const iconCls = "h-6 w-6 fill-[#111827] dark:fill-slate-500"; // slate-900 in light

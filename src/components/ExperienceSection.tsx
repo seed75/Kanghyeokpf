@@ -10,7 +10,7 @@ type Exp = {
   badges?: string[];
 };
 
-const RESUME = `${import.meta.env.BASE_URL}resume_kang.pdf`;
+const RESUME = `${import.meta.env.BASE_URL}Kanghyeok LEE_CV.pdf`;
 
 const EXPERIENCES: Exp[] = [
   {
