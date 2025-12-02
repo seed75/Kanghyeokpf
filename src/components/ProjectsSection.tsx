@@ -9,6 +9,15 @@ type Proj = {
 };
 
 const PROJECTS: Proj[] = [
+
+  {
+    name: "KangHire AI - Resume Coach",
+    url: "https://kang-hire-ai.vercel.app/",
+    image: "/image/thumbnail/HireAI.png",
+    summary:
+      "AI-powered resume analyzer that evaluates text or PDF/DOCX resumes, detects missing skills, and generates tailored improvement suggestions based on the user’s target job role. Built with FastAPI, React, and Groq (LLaMA 3.3) for real-time, structured resume feedback.",
+    badges: ["React", "TypeScript", "FastAPI", "Python", "Groq AI", "PDF/DOCX Parsing", "Vercel", "Render"]
+  },
   {
     name: "Campus Election System",
     url: "https://github.com/seed75/online-voting-system-using-PHP?tab=readme-ov-file",

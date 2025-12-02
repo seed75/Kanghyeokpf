@@ -19,7 +19,7 @@ const EXPERIENCES: Exp[] = [
     roleCompany: "Manager · Tokuya",
     url: "https://www.mandarincentre.com.au/",
     desc:
-      "All day-to-day operations of Tokuya, including front-of-house, back-of-house coordination, customer satisfaction, staff management, financial performance, and uphold the brand’s standards. You will lead the team to deliver excellent Japanese / fusion dining experiences, maintain operational efficiency, and contribute to the restaurant’s growth.",
+      "All day-to-day operations of Tokuya, including front-of-house, back-of-house coordination, customer satisfaction, staff management, financial performance, and uphold the brand’s standards. Lead the team to deliver excellent Japanese / fusion dining experiences, maintain operational efficiency, and contribute to the restaurant’s growth.",
     badges: [
       "Communication","Management","Customer Service","Operation Skills","Attention to Detail",
       "Adaptability",
