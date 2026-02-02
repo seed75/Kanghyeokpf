@@ -27,7 +27,7 @@ export default function AboutSection() {
   
           My strengts is {" "}
           <HoverWord text="execution." className="font-semibold" /> I can take a concept, design it, build it, fix it and deploy it.
-And I genuinely enjoy the process JavaScript debugging, UI polishing, API integration, performance tuning, all of it.
+          And I genuinely enjoy the process JavaScript debugging, UI polishing, API integration, performance tuning, all of it.
         </p>
 
         <p>

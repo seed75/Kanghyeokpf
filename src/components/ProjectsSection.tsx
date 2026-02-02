@@ -11,6 +11,14 @@ type Proj = {
 const PROJECTS: Proj[] = [
 
   {
+    name: "Yservice - Weekly Timesheets",
+    url: "https://yservice-web.vercel.app/",
+    image: "/image/thumbnail/yservice.png",
+    summary:
+      "Owner-only weekly timesheet and payroll management system built for small businesses. Allows employers to manage employees, record daily clock-in/out times, automatically calculate weekly hours and bi-weekly pay runs and lock paid periods to prevent edits. Implemented secure email-based authentication with Supabase Auth, Row Level Security (RLS) and audit-safe paid locks. Designed with a clean, owner-friendly UI focused on speed and accuracy.",
+    badges: ["Next.js (App Router)", "React", "TypeScript", "Supabase", "Supabase Auth", "PostgreSQL", "Row Level Security (RLS)", "Vercel", "Owner-only Admin Tool"]
+  },
+  {
     name: "KangHire AI - Resume Coach",
     url: "https://kang-hire-ai.vercel.app/",
     image: "/image/thumbnail/HireAI.png",
