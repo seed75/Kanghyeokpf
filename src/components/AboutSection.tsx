@@ -6,44 +6,31 @@ export default function AboutSection() {
     <div className="pt-6 lg:pt-0">
       <div className="space-y-4">
         <p>
-          I'm a front-end developer who builds clean, intuitive, and fast web experiences but what really defines me is how quickly I learn, adapt and turn ideas into real products.
-          I didn't just study theory in university. I taught myself modern development by building real, working applications like an {" "}
-          <HoverWord text="AI-powered resume analyzer"
-          className="font-semibold"/>
-          {", a "}
-          <HoverWord text="secure online campus voting system"
-          className="font-semibold"/>
-          {", a "}
-          <HoverWord text="custom AI chat application"
-          className="font-semibold"/>
-          {", and "}
-          <HoverWord text="multiple personal tools and portfolio sites"
-          className="font-semibold"/>.
+          I build real web products — not just demos.
         </p>
 
         <p>
-          Every project started the same way - <span>“I want to make this… even if I don’t know how yet.”</span>
-          Then I learned the tools, solved the errors and shipped the product end to end.
-  
-          My strengts is {" "}
-          <HoverWord text="execution." className="font-semibold" /> I can take a concept, design it, build it, fix it and deploy it.
-          And I genuinely enjoy the process JavaScript debugging, UI polishing, API integration, performance tuning, all of it.
+          I’m a front-end developer who focuses on clean UI, fast performance, and turning ideas into working software.
+          Most of what I know comes from building and shipping projects like an{" "}
+          <HoverWord text="AI-powered resume analyzer" className="font-semibold" />,
+          a{" "}
+          <HoverWord text="secure online voting system" className="font-semibold" />,
+          and several{" "}
+          <HoverWord text="internal tools and portfolio apps" className="font-semibold" />.
         </p>
 
         <p>
-          Right now, I’m seeking opportunities as an {" "}
-          <HoverWord text="Internship, Entry-Level Developer, Graduate Program, " className="font-semibold" />{" "}
-          or{" "}
-          <HoverWord text="Junior Front-End Developer" className="font-semibold" /> anywhere I can contribute to real products, learn from experienced engineers, and grow into someone who delivers both strong technical quality and meaningful user experiences.
+          My biggest strength is{" "}
+          <HoverWord text="execution" className="font-semibold" /> —
+          I can take an idea, design it, build it, debug it, and deploy it end to end.
+          I enjoy the entire process, from JavaScript debugging to UI polish and API integration.
         </p>
 
         <p>
-          Outside of coding, I stay active, {" "}
-          <HoverWord
-            text="explore new tech,"
-            className="font-semibold"
-          />{" "}
-          and enjoy strategy or indie games that spark creativity. I'm always building something new because growth is my default setting.
+          I’m currently looking for{" "}
+          <HoverWord text="internship or junior front-end roles" className="font-semibold" />{" "}
+          where I can contribute to real products, learn from experienced engineers,
+          and grow as a developer.
         </p>
       </div>
     </div>
