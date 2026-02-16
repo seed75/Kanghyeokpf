@@ -11,6 +11,15 @@ type Proj = {
 const PROJECTS: Proj[] = [
 
   {
+    name: "Job Application Tracker",
+    url: "https://job-apptracker.vercel.app/",
+    image: "/image/thumbnail/jat.png",
+    summary:
+      "A full-stack job application tracking tool built to help individuals manage applications from 'Applied' to 'Interview' to 'Offer' or 'Rejected' with clear status workflows, notes, and quick search/filter. Uses Supabase Auth and Row Level Security (RLS) to ensure user-scoped data isolation, with a clean, fast UI and end-to-end reliability validated by Playwright E2E tests. Designed as a production-structured portfolio project focusing on real-world CRUD, auth, and testing.",
+    badges: ["React", "JavaScript", "Tailwind CSS", "Supabase", "Supabase Auth", "PostgreSQL", "Row Level Security (RLS)", "Vercel", "Playwright E2E", "Vercel"]
+  },
+
+  {
     name: "Yservice - Weekly Timesheets",
     url: "https://yservice-web.vercel.app/",
     image: "/image/thumbnail/yservice.png",
