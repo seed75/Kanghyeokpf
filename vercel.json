@@ -1,0 +1,9 @@
+{
+  "redirects": [
+    {
+      "source": "/",
+      "destination": "https://kanghyeok.vercel.app/",
+      "permanent": true
+    }
+  ]
+}
